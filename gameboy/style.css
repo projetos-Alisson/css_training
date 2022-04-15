@@ -1,0 +1,71 @@
+body{
+  background: linear-gradient(45deg, blue,aqua);
+
+}
+
+main{
+    border-right: 15px solid #4f4f4f;
+    left: 140px;
+    width: 280px ;
+    height: 500px;
+    background: grey ;
+    border-radius: 10px 10px 50px 10px;
+    position: absolute;
+    z-index: 0;
+    box-shadow: 10px 10px 30px 10px black;
+    }
+
+.tela{
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg,#98ee98,#00f47f);
+    border: 20px solid rgb(110,108,106);
+    border-radius: 20px;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    left: 20px;
+}
+
+.reflexo{
+    background: linear-gradient(145deg,white,lightgreen);
+    width: 600px;
+    height: 20px;
+    transform:rotate(145deg);
+
+}
+
+.reflexo1{
+     background: linear-gradient(145deg,white,lightgreen);
+     width: 600px;
+     height: 40px;
+     left: -60px;
+     transform: rotate(145deg);
+     position:absolute;
+     top: -60px;  
+
+}
+
+.direcionais{
+     background: rgb(43,42,42);
+     border-radius: 100%;
+     width: 90px;
+     height: 90px;
+     z-index: 3;
+     position: absolute;
+     top: 320px;
+     left: 20px;
+     grid-template-columns: ifr ifr ifr;
+     grid-template-areas:" . cima ."
+       "esq . dir"
+       " . baixo . ";
+
+}
+.cima{
+    display: grid;
+
+
+
+
+}
