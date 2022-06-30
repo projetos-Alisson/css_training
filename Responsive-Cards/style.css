@@ -1,0 +1,120 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+body{
+   background: rgb(96, 45, 158) ;
+   height: 100vh;
+   width: 100%;
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+
+   color: rgb(0, 0, 0);
+}
+
+main.cards{
+
+    display: flex;
+    padding: 32px;
+   
+}
+
+main.cards section.card{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     background: white;
+     padding: 1rem 1.5rem;
+     border-radius: 8px;
+     max-height: 448px;
+     margin-left: 32px;
+}
+
+main.cards section.card:first-child{
+    margin-left: 0;
+}
+
+main.cards section.card .icon{
+    width: 64px;
+    height: 64px;
+}
+
+main.cards section.card img{  /*img é filha da class "icon", portanto o 100% aplicado a img, vai fazer com que elas ocupem o 100% (representado por 64px) da altura e largura do icon */
+    width: 100%;
+
+}
+
+/*TITULO */
+main.cards section.card h3{
+    font-size: 100%;
+    margin: 16px 0px;
+}
+
+/*SPAN*/
+main.cards section.card span{
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+/*BOTÃO*/
+main.cards section.card button{
+     padding: 0.5rem 1rem;
+     text-transform: uppercase;
+     border-radius: 32px;
+     border: 0;
+     cursor: pointer;
+     font-size: 80%;
+     font-weight: 500; /*peso da fonte */
+     color: white;
+}
+
+
+/*YOUTUBE*/
+main.cards section.card.yt button{
+      background: linear-gradient(to right, rgb(116, 11, 11), rgb(210, 8, 8));
+}
+/*GITHUB*/
+main.cards section.card.git button{
+    background: linear-gradient(to right, rgb(11, 72, 116), rgb(8, 136, 210));
+}
+/*INSTAGRAM*/
+main.cards section.card.inst button{
+    background: linear-gradient(to right, rgb(149, 25, 116), rgb(210, 136, 8));
+}
+
+/*SOMBRAS*/
+
+main.cards section.card.yt {
+   box-shadow: 20px 20px 50px -30px rgb(210, 8, 8);
+}
+
+main.cards section.card.git {
+    box-shadow: 20px 20px 50px -30px rgb(11, 72, 116);
+ }
+
+ main.cards section.card.inst {
+    box-shadow: 20px 20px 50px -30px rgb(149, 25, 116);
+ }
+
+
+ @media screen and (max-width: 720px) {
+     main.cards{
+        flex-direction: column;
+     } 
+     main.cards section.card{
+        margin-left: 0; /*CONSERTAR O CARTÃO QUE ESTAVA INDO PRA ESQUERDA*/
+        margin-bottom: 32px; /*AFASTAR UM CARD DO OUTRO */
+     }
+     main.cards section.card:last-child{   /*VAI ZERAR O DISTANCIAMENTO DA ALTURA PRA NÃO FICAR DESPROPORCIONAL */
+        margin-bottom: 0;
+     }
+}
